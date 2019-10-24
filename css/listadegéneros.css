@@ -2,6 +2,7 @@ body{
   font-family: 'Oswald', sans-serif;
   line-height: 1.5em;
   background-color: black;
+  color: white;
 }
 .inner_main_menu{
   margin: 0 auto;
