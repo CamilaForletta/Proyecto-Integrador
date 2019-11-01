@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Lista de géneros</title>
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/listadegéneros.css">
+    <link rel="stylesheet" href="css/navBar.css">
         <link href="https://fonts.googleapis.com/css?family=Oswald:400&display=swap" rel="stylesheet">
   </head>
   <body>
@@ -18,13 +20,14 @@
         <ul>
           <li><a href="#">TENDENCIAS</a> </li>
           <li><a href="listadegéneros.html">GENEROS</a></li>
-          <li><form class="buscador" action="script.php" method="get">
+          <li><form class="buscador" action="scrip.php" method="get">
             <input type="text" name="palabra" placeholder="Nombre de series, géneros">
-          <button type="Buscar" name="registro.html"><a href="resultadosdelbuscador.html">Buscar</a></button></form></li>
+          <button class="button" type="Buscar" name="registro.html"><a href="resultadosdelbuscador.html">Buscar</a></button></form></li>
           <li><a href="login.html">LOGIN</a> </li>
         </ul>
       </div>
     </div>
+
   </header>
 
   <main class="main-listadegéneros">
@@ -47,14 +50,17 @@
 <a href="seriesporgénero.html"><h2>Western</h2></a>
   </main>
 
-  <footer class="footer">
-    <div class="logo TBMD">
-      <img src="img/logoTMBDblue.png" alt=""></div>
-      <div class="nombresIntegrantes"><h3>Alumnos que hicieron el proyecto:<br>
+    <footer class="footer">
 
-        Alejo Amillano.<br> Camila Forletta.</h3></div>
-        <div class="Desde2019"><h4>Desde 2019.</h4><div>
-  </footer>
+    <div id="low_menu2">
+      <div class="logo2">
+        <img width="70%" src="img/logoTMBDblue.png" alt="">
+      </div>
+    <div class="nombresIntegrantes"><h5>
+          Alejo Amillano | Camila Forletta </h5><h6>Copyright© 2019</h6>
+        </div>
+      </footer>
+
   <script type="text/javascript" src="js/listadegéneros.js"></script>
   </body>
 </html>
