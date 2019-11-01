@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/navBar.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald:400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
   <body>
 
@@ -19,9 +20,7 @@
       <ul>
         <li><a href="#">TENDENCIAS</a> </li>
         <li><a href="listadegéneros.html">GENEROS</a></li>
-        <li><form class="buscador" action="scrip.php" method="get">
-          <input type="text" name="palabra" placeholder="Nombre de series, géneros">
-        <button class="button" type="Buscar" name="registro.html"><a href="resultadosdelbuscador.html">Buscar</a></button></form></li>
+        <li class="search_bar"><form class="buscador" action="scrip.php" method="get"><button class="btn"><i class="fa fa-search"></i></button> <input type="text" name="" value=""></form></li>
         <li><a href="login.html">LOGIN</a> </li>
       </ul>
     </div>
@@ -30,7 +29,7 @@
 
 <main>
 <section class="main_index">
-  <h1>Series más populares</h1>
+  <h1>SERIES MAS POPULARES</h1>
  <div class="SeriesPopulares">
     <article class="series1">
     <a href="detalledeserie.html"> <h2>Batwoman</h2>
@@ -122,5 +121,7 @@
   </footer>
 
 <script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/buscadoredicion.js"></script>
+
   </body>
 </html>
