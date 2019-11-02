@@ -5,18 +5,3 @@ body{
   background-color: black;
   color: white;
 }
-
-#main_menu{
-  width: 100%;
-  position: relative;
-}
-.logo{
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  left: 50%;
-  top: 0;
-  content: "";
-  margin-left: -150px;
-  text-align: center;
-}
