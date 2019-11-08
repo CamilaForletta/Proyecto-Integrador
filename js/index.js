@@ -14,7 +14,9 @@ fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=c062382504198a6a2cc6
   .then(function(information) {
     var peliculas = information.results
     for(var i = 0;i < 5; i++){
-      if(i==0)
+      if(i==0) {
+        
+      }
     }
 })
  .catch(function(errores){
@@ -24,7 +26,7 @@ fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=c062382504198a6a2cc6
 
 // INDEX Series
 
-var arraySeries= document.querySelector()
+var contenedorPopulares = document.querySelector(".movie-list1");
 
 fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=c062382504198a6a2cc69f4b0fcd9319&language=es-AR&page=1')
   .then(function(response) {
@@ -32,9 +34,14 @@ fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=c062382504198a6a2cc6
     console.log(response);
  })
  .then(function(information) {
-   var peliculas = information.results
-   for(var i = 0;i < 5; i++){
-     
+   var series = information.results
+   for(var i = 0; i < 6; i++){
+     contenedorPopulares.innerHTML += `
+       <article class="movie-item">
+         <a href="detalledeserie.html">
+         <img src="https://image.tmdb.org/t/p/original/${series[i].poster_path}" alt=""></a>
+       </article>
+     `;
    }
 })
  .catch(function(errores){
