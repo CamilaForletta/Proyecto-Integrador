@@ -10,6 +10,7 @@ body{
 section.main_index{
  position: relative;
  padding-top: 10%;
+ font-family: 'Oswald', sans-serif;
 }
 
 section.main_index div.SeriesHoy,
@@ -52,4 +53,5 @@ section.main_index div.SeriesPopulares a h2{
 section.main_index h1{
   text-align: center;
   font-weight: 500;
+  color: white;
 }

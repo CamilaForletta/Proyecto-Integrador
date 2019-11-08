@@ -1,0 +1,123 @@
+html{
+  background-color:black;
+  height:100%;
+  width:100%;
+
+}
+body{
+  background-color:black;
+}
+.show-location a:hover{
+	color: #42e8ff;
+}
+.slick-dots li button:before{
+	color:white;
+}
+.prev-arrow{
+	left: 10px;
+	z-index: 1;
+}
+.next-arrow{
+	right: 10px;
+	z-index: 1;
+}
+.next-arrow:before, .prev-arrow:before{
+	font-size: 35px;
+    line-height: 1;
+    opacity: .75;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.next-arrow, .prev-arrow{
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    text-align: center;
+    text-shadow: 1px 3px 10px rgba(0, 9, 28, 0.5);
+    -webkit-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: 0;
+    background: 0 0;
+}
+
+#movie-slider{
+  width:100%;
+  margin:0 auto;
+}
+
+.slider.slider-for:hover .slick-arrow{
+	opacity: 1;
+}
+.slider.slider-for .slick-arrow{
+	opacity: 0;
+}
+.caro-preview {
+  background-position:center center;
+  background-size:cover;
+  cursor:pointer;
+  background-repeat:no-repeat
+}
+
+.caro-wrap .caro-content{
+  padding:8%;
+  width: 50%;
+  z-index:50;
+  text-align:left;
+}
+.caro-wrap .caro-content h3{
+  font-size:4em;
+  color:#ffffff;
+  z-index:9;
+}
+.caro-wrap .caro-content p{
+  text-align:left;
+  color:#ffffff;
+}
+
+
+.caro-strip{
+  margin-top:0px;
+}
+
+.caro-thmb-preview.slick-current{
+  background-color:#0dcaf9;
+  opacity:1
+}
+
+.caro-thmb-preview {
+  cursor:pointer;
+  padding:8px;
+  opacity:0.5;
+
+  background-position:center center;
+  background-size:cover;
+}
+.caro-thmb-preview .caro-thmb-content{
+  min-height:160px;
+  padding:5%;
+  background-position:center center;
+  background-size:cover;
+  z-index:2;
+  position:relative;
+}
+.caro-thmb-preview .caro-thmb-content h5{
+  color:#ffffff;
+  position:absolute;
+  bottom:0;
+  text-shadow: 1px 1px 5px rgba(0, 11, 30, 0.7);
+}
+
+.slick-dots{
+  top: 90%;
+  color: white;
+}
