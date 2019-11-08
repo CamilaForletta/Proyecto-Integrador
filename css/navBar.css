@@ -88,3 +88,9 @@
 .btn:hover{
   color: white;
 }
+@media (max-width: 750px) {
+
+}
+@media (max width: 450px) {
+
+}
