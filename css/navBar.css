@@ -4,8 +4,8 @@
   width: 100%;
   position: fixed;
   z-index: 1;
-  background-color: rgba(0,0, 0, 0.8);
-  font-family: 'Oswald', sans-serif;  
+  font-family: 'Oswald', sans-serif;
+  height: 0%;
 
 }
 .logo{
@@ -28,6 +28,8 @@
   list-style: none;
   margin: 0;
   text-align: right;
+  position: relative;
+  top: -20px;
 }
 .inner_main_menu li{
   float: none;
@@ -65,19 +67,22 @@
   border-radius: 30px;
   height: 35%;
   border: none;
-  padding: 15px 0px 5px 25px;
+  padding: 5px 0px 5px 25px;
   box-sizing: border-box;
   top: 10px;
   color: #fff;
   outline: none;
+  position: relative;
+  top: -2px;
 }
 
 .btn{
   background-color: transparent;
   border: none;
   position: absolute;
-  font-size: 30px;
+  font-size: 100px;
   cursor: pointer;
+  z-index: 2;
 }
 
 .btn:hover{

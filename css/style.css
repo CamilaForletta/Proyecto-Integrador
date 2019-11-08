@@ -1,11 +1,10 @@
 html{
-  background-color:black;
   height:100%;
   width:100%;
 
 }
 body{
-  background-color:black;
+  background: #000;
 }
 .show-location a:hover{
 	color: #42e8ff;
@@ -69,10 +68,12 @@ body{
 }
 
 .caro-wrap .caro-content{
-  padding:8%;
+  padding: 8%;
   width: 50%;
   z-index:50;
   text-align:left;
+  height: 650px;
+  padding-top: 15%;
 }
 .caro-wrap .caro-content h3{
   font-size:4em;
