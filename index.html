@@ -8,11 +8,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/navBar.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald:400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css'>
-    <link rel='stylesheet' href='https://kenwheeler.github.io/slick/slick/slick-theme.css'><link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css" />
     </head>
   <body>
 <header class="header">
@@ -33,45 +29,28 @@
     </div>
   </div>
 </header>
-<div id="movie-slider">
 
-  <div class="slider slider-for caro-wrap">
+<main>
+  <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: push">
 
-    <div class="caro-preview" style="background-image:linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.0)),url('https://image.tmdb.org/t/p/original/8TOkxONO3TEeJRuZWb0hG7SboyV.jpg')">
-      <div class="caro-content">
-        <h3>SEE</h3><br>
-        <h6 class="showtime" style="color:#ffffff">7.7 / 10</h6>
-        <p>A virus has decimated humankind. Those who survived emerged blind. Centuries later when twins are born with the mythic ability to see, their father must protect his tribe against a threatened queen.</p>
-        <br>
-        <h6 class="show-location" style="color:#ffffff"><a href="" target="_blank" rel="noopener noreferrer">TRAILER</a></h6><br>
-      </div>
-    </div>
+      <ul class="uk-slideshow-items" uk-height-viewport="min-height: 100" id="carrusel">
+          <!-- <li>
+              <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
+                  <img src="" alt="" uk-cover>
+              </div>
+              <div class="info-serie-carrusel">
+                <h2>Hola</h2>
+                <h4>Valoracion</h4>
+                <p>Sinopsis Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <h4><a href="">Trailer</a></h4>
+            </div>
+          </li> -->
+      </ul>
 
-    <div class="caro-preview" style="background-image:linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.0)),url('https://wwwimage-secure.cbsstatic.com/thumbnails/photos/w1920/marquee/11/63/25/1/hero_landscape_f79b8c47-7be7-4bb6-857c-dace4a803951.jpg')">
-      <div class="caro-content">
-        <h3>BLUE BLOODS</h3><br>
-        <h6 class="showtime" style="color:#ffffff">7.4 / 10</h6>
-        <p>A drama about a multi-generational family of cops dedicated to New York City law enforcement. Frank Reagan is the New York Police Commissioner and heads both the police force and the Reagan brood.</p>
-        <br>
-        <h6 class="show-location" style="color:#ffffff"><a href="" target="_blank" rel="noopener noreferrer">TRAILER</a></h6><br>
-      </div>
-    </div>
-
-    <div class="caro-preview" style="background-image:linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.0)),url('https://image.tmdb.org/t/p/original/nKhSZltnfLu1DfDdjRURcBbXTMH.jpg')">
-      <div class="caro-content">
-        <h3>BRITANNIA</h3>
-        <br>
-        <h6 class="showtime" style="color:#ffffff">7.6 / 10</h6>
-        <p>An epic drama set in 43AD as the Roman Imperial Army – determined and terrified in equal measure - returns to crush the Celtic heart of Britannia - a mysterious land ruled by warrior women and powerful druids who can channel the powerful forces of the underworld.</p>
-        <br>
-        <h6 class="show-location" style="color:#ffffff"><a href="" target="_blank" rel="noopener noreferrer">TRAILER</a></h6>
-      </div>
-    </div>
+      <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+      <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
 
   </div>
-<main>
-  <section class="main_index">
-
   <div class='movie-list1'>
     <div class='discover'><h5>POPULARES</h5></div>
 
@@ -101,7 +80,7 @@
 <div class="movie-list2">
     <div class='discover'><h5>VALORADAS</h5>
     </div>
-    <article class="movie-item">
+    <!-- <article class="movie-item">
     <a href="detalledeserie.html">
     <img src="img/iamnotananimal.jpg" alt=""></a></article>
     <article class="movie-item">
@@ -120,12 +99,12 @@
     <article class="movie-item">
     <a href="detalledeserie.html">
     <img src="img/planetatierraII.jpg" alt=""> </a>
-    </article>
+    </article> -->
 </div>
 <div class="movie-list3">
   <div class='discover'><h5>AL&nbsp;AIRE&nbsp;HOY</h5>
   </div>
-  <article class="movie-item">
+  <!-- <article class="movie-item">
   <a href="detalledeserie.html">
   <img src="img/theblacklist.jpg" alt=""></a>
   </article>
@@ -148,7 +127,7 @@
   <article class="movie-item">
   <a href="detalledeserie.html">
   <img src="img/bluebloods.jpg" alt=""></a>
-  </article>
+  </article> -->
 </div>
   <section>
 </main>
@@ -166,8 +145,8 @@
 
 <script type="text/javascript" src="js/index.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" charset="utf-8"></script>
-<script src='https://earthxstage.wpengine.com/wp-includes/js/jquery/jquery.js'></script>
-<script src='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'></script><script  src="js/script.js"></script>
 <script src="https://kit.fontawesome.com/d13daeae51.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js"></script>
   </body>
 </html>
