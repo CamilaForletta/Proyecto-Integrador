@@ -21,9 +21,9 @@ body {
   overflow: hidden;
 }
 
-#movie-list1 li::after,
-#movie-list2 li::after,
-#movie-list3 li::after{
+#movie-list1 a::after,
+#movie-list2 a::after,
+#movie-list3 a::after{
   content: '';
   display: block;
   position: absolute;
@@ -36,13 +36,29 @@ body {
 
 .info-serie-carrusel{
   position: relative;
-  top: 35%;
+  top: 28%;
   left: 7%;
   width: 40%;
 }
 
 .info-serie-carrusel h1{
   text-transform: uppercase;
+  font-weight: bold;
+}
+
+.lista-series h2{
+    font-family: 'Oswald',sans-serif;
+    text-transform: uppercase;
+    padding: 20px;
+    text-align: center;
+}
+
+.lista-series a{
+  top: 250px;
+}
+
+#carrusel a::after{
+  background: linear-gradient(to bottom, transparent 10%, #000 140%);
 }
 
 /* TABLET */
