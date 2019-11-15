@@ -27,7 +27,7 @@ fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=c062382504198a6a2cc6
               <h1>${arraySeries[i].name}</h1>
               <h4>${arraySeries[i].vote_average} / 10&nbsp;&nbsp;<i class="fas fa-star"></i></h4>
               <p>${arraySeries[i].overview}</p>
-              <h4><a href=detalledeserie.html?id="${arraySeries[i].id}">VER MÁS</a></h4>
+              <h4><a href=detalledeserie.html?id=${arraySeries[i].id}>VER MÁS</a></h4>
           </div>
         </li>
     `;
@@ -80,7 +80,7 @@ fetch('https://api.themoviedb.org/3/tv/top_rated?api_key=c062382504198a6a2cc69f4
      <li>
          <div class="uk-panel">
             <img src="https://image.tmdb.org/t/p/original/${series[i].poster_path}" alt="">
-            <a href=detalledeserie.html?id="${series[i].id}"></a>
+            <a href=detalledeserie.html?id=${series[i].id}></a>
          </div>
      </li>
      `;
@@ -104,7 +104,7 @@ fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=c062382504198a6a2cc6
      <li>
          <div class="uk-panel">
             <img src="https://image.tmdb.org/t/p/original/${series[i].poster_path}" alt="">
-            <a href=detalledeserie.html?id="${series[i].id}"></a>
+            <a href=detalledeserie.html?id=${series[i].id}></a>
          </div>
      </li>
      `;
