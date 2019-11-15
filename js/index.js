@@ -1,4 +1,4 @@
-window.addEventListener('load', function(){})
+window.addEventListener('load', function(){
 
 // APIKey : c062382504198a6a2cc69f4b0fcd9319
 var queryString = location.search
@@ -54,7 +54,7 @@ fetch('https://api.themoviedb.org/3/tv/popular?api_key=c062382504198a6a2cc69f4b0
      <li>
          <div class="uk-panel">
             <img src="https://image.tmdb.org/t/p/original/${series[i].poster_path}" alt="">
-            <a href=detalledeserie.html?id="${series[i].id}"></a>
+            <a href=detalledeserie.html?id=${series[i].id}></a>
          </div>
      </li>
      `;
@@ -92,7 +92,7 @@ fetch('https://api.themoviedb.org/3/tv/top_rated?api_key=c062382504198a6a2cc69f4
 
 var contenedorHoy = document.querySelector("#movie-list3");
 
-fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=c062382504198a6a2cc69f4b0fcd9319&language=es-AR&page=1')
+fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=c062382504198a6a2cc69f4b0fcd9319')
   .then(function(response) {
     return response.json();
     console.log(response);
@@ -113,3 +113,4 @@ fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=c062382504198a6a2cc6
  .catch(function(errores){
   console.log(errores)
 });
+})
