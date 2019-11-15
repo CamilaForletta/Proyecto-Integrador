@@ -14,10 +14,10 @@ console.log(name);
    console.log(information);
   var seriesGenero = document.querySelector(".seriesgenero")
    var series = information.results
-   for(var i = 0; i < 15; i++){
+   for(var i = 0; i < series.length; i++){
      seriesGenero.innerHTML += `
    <ul>
-     <li><a href="detalledeserie.html"><img src="https://image.tmdb.org/t/p/original/${series[i].poster_path}" alt=""></a> </li>
+     <li><a href=detalledeserie.html?id=${series[i].id}><img src="https://image.tmdb.org/t/p/original/${series[i].poster_path}" alt=""></a> </li>
    </ul>
    `;
    }
