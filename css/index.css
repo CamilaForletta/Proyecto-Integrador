@@ -1,4 +1,5 @@
 @import url('https://cdn.jsdelivr.net/npm/typeface-inter/inter.css');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,500,700&subset=latin-ext');
 *{box-sizing: border-box;}
 body {
   line-height: 1.5em;
@@ -46,22 +47,40 @@ body {
   font-weight: bold;
 }
 
-.lista-series h2{
+.titles h2{
     font-family: 'Oswald',sans-serif;
     text-transform: uppercase;
     padding: 20px;
     text-align: center;
+    position: relative;
 }
 
-.lista-series a{
-  top: 250px;
+.titles h2::before{
+  content: '/';
+  color: #EA0000;
+  position: relative;
+  left: -10px;
 }
 
+<<<<<<< Updated upstream
 
 
 #carrusel a::after{
   background: linear-gradient(to bottom, transparent 10%, #000 140%);
+=======
+/*.titles a{
+  visibility: hidden;
+  display: none;
+  text-align: center;
+  position: relative;
+  top: -68px;
+>>>>>>> Stashed changes
 }
+
+.titles h2:hover + a{
+  display: block;
+  visibility: visible;
+}*/
 
 /* TABLET */
 @media (max-width: 750px) and (min-width:){
