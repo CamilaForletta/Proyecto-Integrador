@@ -34,6 +34,7 @@
 .inner_main_menu li{
   float: none;
   display: inline-block;
+  position: relative;
 }
 .inner_main_menu li:nth-child(1){
   float: left;
@@ -61,6 +62,36 @@
 .inner_main_menu ul li a:hover{
   color: white;
 }
+
+.inner_main_menu ul li:hover #genres-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#genres-list {
+  display: none;
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 360px;
+}
+
+#genres-list div {
+  background-color: red;
+  padding: 10px 30px;
+  width: 50%;
+  border: solid 1px green;
+}
+
+#genres-list div a {
+  font-size: 18px;
+  color: white;
+  display: block;
+  text-align: center;
+  padding: 0;
+}
+
 .search_bar input{
   background-color: rgba(140,114,114,0.7);
   width: 95%;

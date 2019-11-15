@@ -2,7 +2,8 @@
   position: relative;
   width: 100%;
   background-color: #E7E2E2;
-  height: 320px ;
+  height: 270px ;
+  bottom: 0;
   font-family: 'Open Sans', sans-serif;
 }
 

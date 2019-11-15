@@ -18,12 +18,14 @@ h1{
 }
 #main-listadegeneros{
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
-  top: 13rem;
-  position: relative;
 }
+
+#main-listadegeneros li{
+  width: 25%;
+}
+
 ul{
   margin: 0;
   padding: 0;
