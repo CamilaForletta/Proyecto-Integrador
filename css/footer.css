@@ -1,9 +1,9 @@
 #low_menu2{
   position: relative;
+  bottom:0;
   width: 100%;
   background-color: #E7E2E2;
-  height: 270px ;
-  bottom: 0;
+  height: 280px;
   font-family: 'Open Sans', sans-serif;
 }
 
