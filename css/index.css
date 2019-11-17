@@ -56,13 +56,18 @@ body {
 }
 
 .titles h2::before{
-  content: '/';
+  content: '//';
   color: #EA0000;
   position: relative;
   left: -10px;
 }
+.titles h2::after{
+content: '//';
+color: #EA0000;
+position: relative;
+right: -10px;}
 
-<<<<<<< Updated upstream
+
 
 
 #carrusel a::after{
