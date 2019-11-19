@@ -33,7 +33,7 @@ fetch("https://api.themoviedb.org/3/tv/"+ id +"?api_key=c062382504198a6a2cc69f4b
           <div class="serie-info-container">
             <div class="serie-info-box serie-info-box--genre">
               <div class="serie-info-box-title">Genero</div>
-              <div class="serie-info-box-content">${generos.name} , ${generos2.name}</div>
+              <div class="serie-info-box-content">${generos.name}</div>
             </div>
             <div class="serie-info-box serie-info-box--director">
               <div class="serie-info-box-title">Director</div>
@@ -58,7 +58,7 @@ fetch("https://api.themoviedb.org/3/tv/"+ id +"?api_key=c062382504198a6a2cc69f4b
    console.log(errores)
  });
 
-// TRAILER
+/*// TRAILER
 
 fetch("https://api.themoviedb.org/3/tv/"+ id +"/videos?api_key=c062382504198a6a2cc69f4b0fcd9319")
   .then(function(respuesta) {
@@ -82,7 +82,7 @@ fetch("https://api.themoviedb.org/3/tv/"+ id +"/videos?api_key=c062382504198a6a2
   })
   .catch(function(error) {
     console.log("Error: " + error);
-  })
+  })*/
 
   //lista de GENEROS
   var listaParaGeneros = document.querySelector("#genres-list");
