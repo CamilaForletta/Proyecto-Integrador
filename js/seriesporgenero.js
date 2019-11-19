@@ -12,13 +12,15 @@ console.log(name);
  })
  .then(function(information) {
    console.log(information);
-  var seriesGenero = document.querySelector(".seriesgenero")
+  var seriesGenero = document.querySelector("#seriesgenero")
    var series = information.results
    for(var i = 0; i < series.length; i++){
      seriesGenero.innerHTML += `
-   <ul>
-     <li><a href=detalledeserie.html?id=${series[i].id}><img src="https://image.tmdb.org/t/p/original/${series[i].poster_path}" alt=""></a> </li>
-   </ul>
+     <div id="hola">
+        <a href=detalledeserie.html?id=${series[i].id}>
+        <img class="imagenesgenero" src="https://image.tmdb.org/t/p/original/${series[i].poster_path}" alt="">
+        </a>
+     </div>
    `;
    }
 })

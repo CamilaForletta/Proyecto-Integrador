@@ -1,8 +1,132 @@
 *{box-sizing: border-box;}
-body{
-  font-family: 'Oswald', sans-serif;
-  line-height: 1.5em;
-  background-color: black;
-  color: white;
+body, html {
+  font-family: 'Ubuntu', sans-serif;
+  min-height: 100%;
+  background-color: #000;
+  color: #fff;
   margin: 0 auto;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.Header {
+  padding-top: 50px;
+  padding-bottom: 0px;
+}
+.Header .container {
+  display: flex;
+  align-items: center;
+}
+
+.Title {
+  position: relative;
+  top: 10px;
+  z-index: 3;
+}
+
+.Title .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.serie {
+  width: 100%;
+  padding-left: 150px;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+  display: flex;
+}
+.serie-info {
+  width: 450px;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 40%;
+}
+.serie-info-container {
+  height: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.serie-info-box-title {
+  font-size: 14px;
+}
+.serie-info-box-title:before {
+  content: '/';
+  color: #EA0000;
+  position: relative;
+  left: -10px;
+}
+.serie-info-box-content {
+  margin-top: 20px;
+  color: #999;
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 22px;
+  width: 150%;
+}
+.serie-info-box--genre {
+  width: 55%;
+}
+.serie-info-box--director {
+  width: 45%;
+}
+.serie-info-box--stars {
+  width: 50%;
+  margin-top: 60px;
+}
+.serie-info-watch {
+  cursor: pointer;
+  height: 5%;
+  font-size: 12px;
+}
+
+.serie-info-watch span {
+  padding-bottom: 3px;
+  border-bottom: 2px solid #EA0000;
+}
+.serie-image {
+  display: flex;
+  margin-left: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  right: 65%;
+}
+
+.serie-image img{
+  position: relative;
+  width: 380px;
+  height: 550px;
+  border-radius: 5px;
+}
+.Title-big{
+  position: relative;
+  top: 70px;
+  left: 43%;
+}
+
+.Title-big h1{
+  font-size: 35px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.contenedorDetalle{
+  position: relative;
+  right: 13%;
+  top: 4rem;
+  z-index: 0
+}
+
+.trailerserie {
+  position: relative;
+  left: 82%;
+  bottom: 35rem;
 }

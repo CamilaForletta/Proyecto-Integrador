@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/navBar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald:400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css" />
+
   </head>
   <body>
     <header class="header">
@@ -36,18 +38,11 @@
       </div>
     </header>
 
-    <main class="main-seriesporgenero">
-      <div class="titulodegenero">
-        <ul>
-          <li>Género</li>
-        </ul>
-      </div>
-      <div class="seriesgenero">
-        <!-- <ul>
-          <li><img src="" alt=""> </li>
-        </ul> -->
-      </div>
-    </main>
+    <div class="uk-grid-column-small uk-grid-row-large uk-child-width-1-5@s uk-text-center" uk-grid id="seriesgenero">
+     <!--<div>
+        <div class="uk-card uk-card-default uk-card-body"><img src="" alt=""></div>
+     </div>-->
+   </div>
 
     <footer class="footer">
     <div id="low_menu2">
@@ -59,5 +54,10 @@
         </div>
       </footer>
     <script type="text/javascript" src="js/seriesporgenero.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js"></script>
+    <script src="js/navBar.js" charset="utf-8"></script>
+
+
   </body>
 </html>

@@ -15,52 +15,44 @@ fetch("https://api.themoviedb.org/3/tv/"+ id +"?api_key=c062382504198a6a2cc69f4b
   .then(function(informacion) {
     console.log(informacion);
     var serieDetalle = informacion
-    var contenedorSeries = document.querySelector(".main-detalledeserie")
+    var generos =  serieDetalle.genres[0]
+    var generos2 = serieDetalle.genres[1]
+    var creadopor = serieDetalle.created_by[0]
+    var contenedorSeries = document.querySelector(".contenedorDetalle")
     for (var i = 0; i < 1; i++){
       contenedorSeries.innerHTML +=`
-      <div class="title">
-        <article class="title">
-          <h1>${serieDetalle.name}</h1>
-        </article>
+      <div class="Title">
+        <div class="container">
+          <div class="Title-big">
+            <h1>${serieDetalle.name}</h1>
+          </div>
       </div>
-      <div class="generos-pertenece">
-        <article class="generos-pertenece-1">
-          <a href="seriesporgénero.html">Genero 1</a>
-        </article>
-        <article class="generos-pertenece-2">
-          <a href="seriesporgénero.html">Genero 2</a>
-        </article>
-        <article class="generos-pertenece-3">
-          <a href="seriesporgénero.html">Genero 3</a>
-        </article>
-      </div>
-      <div class="lenguajeoriginal">
-        <article class="lenguaje-original">
-          <h2>Lenguaje original</h2>
-        </article>
-      </div>
-      <div class="sinopsis">
-        <article class="sinopsis">
-          <h2>Sinopsis</h2>
-          <h3>Esta serie trata de.....</h3>
-        </article>
-      </div>
-      <div class="fechadeestreno">
-        <article class="fecha-de-estreno">
-          <h2>Fecha de estreno:</h2>
-          <h3>//</h3>
-        </article></div>
-        <div class=posterdeserie>
-        <article class="poster-de-serie">
-          <img src="https://image.tmdb.org/t/p/original/${serieDetalle.poster_path}" alt="" style="width: 30%; height: 30%">
-        </article>
+
+      <div class="serie">
+        <div class="serie-info">
+          <div class="serie-info-container">
+            <div class="serie-info-box serie-info-box--genre">
+              <div class="serie-info-box-title">Genero</div>
+              <div class="serie-info-box-content">${generos.name} , ${generos2.name}</div>
+            </div>
+            <div class="serie-info-box serie-info-box--director">
+              <div class="serie-info-box-title">Director</div>
+              <div class="serie-info-box-content">${creadopor.name}</div>
+            </div>
+            <div class="serie-info-box serie-info-box--stars">
+              <div class="serie-info-box-title">Sinopsis</div>
+              <div class="serie-info-box-content">${serieDetalle.overview}</div>
+            </div>
+          </div>
+          <div class="serie-info-watch">
+            <span>Agregar a favoritos</span>
+          </div>
         </div>
-        <div class="button">
-          <button type="button" name="button">Ver recomendaciones</button>
-        </div>
+        <div class="serie-image"><img src="https://image.tmdb.org/t/p/original/${serieDetalle.poster_path}" alt=""> </div>
+      </div>
+      </div>
       `;
     }
-
   })
   .catch(function(errores){
    console.log(errores)

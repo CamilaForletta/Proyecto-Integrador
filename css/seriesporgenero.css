@@ -1,11 +1,10 @@
-*{box-sizing: border-box;}
+  /*{box-sizing: border-box;}
 body{
   font-family: 'Oswald', sans-serif;
   line-height: 1.5em;
   background-color: black;
   color:white;
 }
-
 .seriesgenero{
   width: 100%;
   position: relative;
@@ -21,7 +20,7 @@ body{
   background: #111;
   overflow: hidden;
   width: 20%;
-  float: left;
+
 }
 
 .seriesgenero a::after{
@@ -38,4 +37,26 @@ body{
 .seriesgenero li img{
   width: 100%;
   display: block;
+  background-position: 50% 50%;
+}*/
+
+body{
+  background-color: black;
+}
+
+.imagenesgenero{
+  min-height: 100%;
+  border-radius: 4px;
+}
+
+#seriesgenero{
+  padding: 35px;
+  padding-top: 105px;
+  margin: 0 auto;
+}
+
+#hola{
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 50px;
 }

@@ -53,13 +53,13 @@ fetch('https://api.themoviedb.org/3/tv/popular?api_key=c062382504198a6a2cc69f4b0
      contenedorPopulares.innerHTML += `
      <li>
          <div class="uk-panel">
+            <a href=detalledeserie.html?id=${series[i].id}>
             <img src="https://image.tmdb.org/t/p/original/${series[i].poster_path}" alt="">
-            <a href=detalledeserie.html?id=${series[i].id}></a>
+            </a>
          </div>
      </li>
      `;
    }
-  var id = this.getAttribute("data-id");
 
 })
  .catch(function(errores){
@@ -79,8 +79,9 @@ fetch('https://api.themoviedb.org/3/tv/top_rated?api_key=c062382504198a6a2cc69f4
      contenedorValoradas.innerHTML += `
      <li>
          <div class="uk-panel">
+            <a href=detalledeserie.html?id=${series[i].id}>
             <img src="https://image.tmdb.org/t/p/original/${series[i].poster_path}" alt="">
-            <a href=detalledeserie.html?id=${series[i].id}></a>
+            </a>
          </div>
      </li>
      `;
@@ -103,8 +104,9 @@ fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=c062382504198a6a2cc6
      contenedorHoy.innerHTML += `
      <li>
          <div class="uk-panel">
+            <a href=detalledeserie.html?id=${series[i].id}>
             <img src="https://image.tmdb.org/t/p/original/${series[i].poster_path}" alt="">
-            <a href=detalledeserie.html?id=${series[i].id}></a>
+            </a>
          </div>
      </li>
      `;
@@ -113,7 +115,6 @@ fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=c062382504198a6a2cc6
  .catch(function(errores){
   console.log(errores)
 });
-
 
   var listaParaGeneros = document.querySelector("#genres-list");
 
