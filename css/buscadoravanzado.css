@@ -6,3 +6,10 @@ body{
   color:white;
   margin: 0 auto;
 }
+label{
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
