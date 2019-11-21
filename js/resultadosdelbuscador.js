@@ -32,40 +32,37 @@ fetch("https://api.themoviedb.org/3/search/tv?api_key=c062382504198a6a2cc69f4b0f
         console.log('data = ', data);
         data = data.results
         console.log(data);
-        for (var i = 0; i < data.length; i++) {
-            var pelicula = data[i]
-            fetch('https://api.themoviedb.org/3/tv/' + pelicula.id + '?api_key=c062382504198a6a2cc69f4b0fcd9319&language=es-AR')
-                .then(function(response) {
-                    return response.json();
-                })
-                .then(function(data) {
-                    var pelicula = data
-                    if (pelicula.poster_path!=null) {
-                      document.querySelector("#seriesbuscador").innerHTML += `
-                      <div id="hola">
-                         <a href=detalledeserie.html?id=${pelicula.id}>
-                         <img class="imagenesgenero" src="https://image.tmdb.org/t/p/original/${pelicula.poster_path}" alt="">
-                         </a>
-                      </div>
-                      `;
+        if (data.length > 0) {
+          for (var i = 0; i < data.length; i++) {
+              var pelicula = data[i]
+              fetch('https://api.themoviedb.org/3/tv/' + pelicula.id + '?api_key=c062382504198a6a2cc69f4b0fcd9319&language=es-AR')
+                  .then(function(response) {
+                      return response.json();
+                  })
+                  .then(function(data) {
+                      var pelicula = data
+                      if (pelicula.poster_path!=null) {
+                        document.querySelector("#seriesbuscador").innerHTML += `
+                        <div id="hola">
+                           <a href=detalledeserie.html?id=${pelicula.id}>
+                           <img class="imagenesgenero" src="https://image.tmdb.org/t/p/original/${pelicula.poster_path}" alt="">
+                           </a>
+                        </div>
+                        `;
 
-                    }
-                })
+                      }
+                  })
+
+                  }
+        } else {
+    			alert('¡No se encontró nada!');
+    			location.href = 'index.html';
+    		}
+      })
                 .catch(function(err) {
                     console.error(err);
                 });
-        }
-
-var formBtn = document.querySelector(".btn")
-var formInput = document.querySelector("#buscador")
-console.log(formBtn);
-console.log(formInput);
-formBtn.addEventListener("click", function(event){
-  if (formInput.value.length < 3) {
-    alert("Mínimo 3 caracteres para realizar la búsqueda.")
-    event.preventDefault();
-  }
-})
+        })
 
 //lista de generos
   var listaParaGeneros = document.querySelector("#genres-list");
@@ -87,5 +84,3 @@ fetch('https://api.themoviedb.org/3/genre/tv/list?api_key=c062382504198a6a2cc69f
   .catch(function(errores){
    console.log(errores)
  });
-})
-})

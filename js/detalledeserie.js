@@ -15,9 +15,6 @@ fetch("https://api.themoviedb.org/3/tv/"+ id +"?api_key=c062382504198a6a2cc69f4b
   .then(function(informacion) {
     console.log(informacion);
     var serieDetalle = informacion
-    var generos =  serieDetalle.genres[0]
-    var generos2 = serieDetalle.genres[1]
-    var creadopor = serieDetalle.created_by[0]
     var contenedorSeries = document.querySelector(".contenedorDetalle")
     for (var i = 0; i < 1; i++){
       contenedorSeries.innerHTML +=`
@@ -33,11 +30,11 @@ fetch("https://api.themoviedb.org/3/tv/"+ id +"?api_key=c062382504198a6a2cc69f4b
           <div class="serie-info-container">
             <div class="serie-info-box serie-info-box--genre">
               <div class="serie-info-box-title">Genero</div>
-              <div class="serie-info-box-content">${generos.name}</div>
+              <div class="serie-info-box-content"></div>
             </div>
             <div class="serie-info-box serie-info-box--director">
               <div class="serie-info-box-title">Director</div>
-              <div class="serie-info-box-content">${creadopor.name}</div>
+              <div class="serie-info-box-content"></div>
             </div>
             <div class="serie-info-box serie-info-box--stars">
               <div class="serie-info-box-title">Sinopsis</div>
