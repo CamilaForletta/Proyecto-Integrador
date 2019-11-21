@@ -34,18 +34,18 @@ fetch("https://api.themoviedb.org/3/search/tv?api_key=c062382504198a6a2cc69f4b0f
         console.log(data);
         if (data.length > 0) {
           for (var i = 0; i < data.length; i++) {
-              var pelicula = data[i]
-              fetch('https://api.themoviedb.org/3/tv/' + pelicula.id + '?api_key=c062382504198a6a2cc69f4b0fcd9319&language=es-AR')
+              var serie = data[i]
+              fetch('https://api.themoviedb.org/3/tv/' + serie.id + '?api_key=c062382504198a6a2cc69f4b0fcd9319&language=es-AR')
                   .then(function(response) {
                       return response.json();
                   })
                   .then(function(data) {
-                      var pelicula = data
-                      if (pelicula.poster_path!=null) {
+                      var serie = data
+                      if (serie.poster_path!=null) {
                         document.querySelector("#seriesbuscador").innerHTML += `
                         <div id="hola">
-                           <a href=detalledeserie.html?id=${pelicula.id}>
-                           <img class="imagenesgenero" src="https://image.tmdb.org/t/p/original/${pelicula.poster_path}" alt="">
+                           <a href=detalledeserie.html?id=${serie.id}>
+                           <img class="imagenesgenero" src="https://image.tmdb.org/t/p/original/${serie.poster_path}" alt="">
                            </a>
                         </div>
                         `;
