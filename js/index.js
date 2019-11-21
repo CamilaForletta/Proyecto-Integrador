@@ -138,7 +138,8 @@ fetch('https://api.themoviedb.org/3/genre/tv/list?api_key=c062382504198a6a2cc69f
  });
 })
 
-//busqueda validada navBar
+
+/*//busqueda validada navBar
 var theForm= document.querySelector(".myForm");
 var inputName= document.querySelector("input(name="buscarSerie")");
 theForm.onsubmit = function(event){
@@ -147,4 +148,4 @@ theForm.onsubmit = function(event){
     inputName.classList.add("error");
     inputName.parentElement.querySelector("b").innerText="Obligatorio";
   }
-}
+}*/

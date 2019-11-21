@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/navBar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Oswald:400&display=swap" rel="stylesheet">
   </head>
   <body>
@@ -28,7 +29,7 @@
             <li class="search_bar">
               <form class="buscador" action="resultadosdelbuscador.html" method="get">
                 <button class="btn"><i class="fa fa-search"></i></button>
-                 <input type="text" name="" value="" required></form></li>
+                 <input id="buscador" type="text" name="buscarSerie" value="" required></form></li>
 
 
             <li><a href="login.html">LOGIN</a> </li>
@@ -38,7 +39,11 @@
     </header>
 
     <main class="main-resultadosdelbuscador">
-
+      <div class="uk-grid-column-small uk-grid-row-large uk-child-width-1-5@s uk-text-center" uk-grid id="seriesbuscador">
+       <!--<div>
+          <div class="uk-card uk-card-default uk-card-body"><img src="" alt=""></div>
+       </div>-->
+     </div>
     </main>
 
     <footer class="footer">
@@ -52,7 +57,8 @@
         </div>
       </footer>
       <script type="text/javascript" src="js/resultadosdelbuscador.js"></script>
+      <script src="https://kit.fontawesome.com/d13daeae51.js" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit.min.js"></script>
       <script src="js/navBar.js" charset="utf-8"></script>
-
   </body>
 </html>

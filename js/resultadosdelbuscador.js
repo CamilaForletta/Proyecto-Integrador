@@ -1,43 +1,72 @@
 window.addEventListener('load', function(){
-  window.addEventListener('load',function(){
-  // 1. Capturo lo que vino por el query string
-  var queryStringObj = new URLSearchParams(window.location.search);
+var queryString = new URLSearchParams(location.search)
+var buscar = queryString.get("buscarSerie")
 
-  // 2. Guardo la palabra de busqueda para pasarla luego a la URL del FETCH
-  var palabraABuscar = queryStringObj.get('buscador');
-  SEND REQUEST
-  https://api.themoviedb.org/3/discover/tv?api_key=ea80e737250396f3fbaef5f707b13894&language=en-US&sort_by=popularity.desc&first_air_date_year=YEAR&page=1&timezone=America%2FNew_York&with_genres=GENEROS&without_genres=GENEROS&include_null_first_air_dates=false
-  fetch('https://api.themoviedb.org/3/search/tv?api_key=c062382504198a6a2cc69f4b0fcd9319&query=' + palabraABuscar)
-    .then(function(response){
-      return response.json();
-    })
-    .then(function(objetoLiteral){
-      // 3. Guardo el array de resultados en una variable
-      var resultados = objetoLiteral.results;
-
-      // 4. Capturo el UL donde quiero meter todos los resultados
-      var listaResultados = document.querySelector('#buscador');
-
-      // 5. Iteramos el array de resultados y creamos una variable donde vamos a generar el html
-      var contenidoFinal = '';
-
-      for (var unResultado of resultados) {
-        // 6. Hacemos un IF para consultar si el resultado tiene imagen. Si es asi generamos el contenido
-        if (unResultado.poster_path != null) {
-          // 7. Generamos un <li> y una <img> por cada serie encontrada
-          contenidoFinal += '<li>';
-          contenidoFinal += '<img src="https://image.tmdb.org/t/p/original/' + unResultado.poster_path + '" alt="la imagen">';
-          contenidoFinal += '<p>' + unResultado.name + '</p>';
-          contenidoFinal += '<a href="detalle.html?idDeSerie='+ unResultado.id +'">VER MAS</a>';
-          contenidoFinal += '</li>';
-        }
-      }
-
-      // 8. Insertamos el contenido final en el HTML del buscador
-      listaResultados.innerHTML = contenidoFinal;
-
-    })
+/*fetch("https://api.themoviedb.org/3/search/tv?api_key=c062382504198a6a2cc69f4b0fcd9319&language=es-ES&query="+buscar+"&page=1&include_adult=false")
+.then(function(respuesta) {
+  return respuesta.json()
+  console.log(respuesta);
 })
+.then(function(informacion) {
+      var arrayBusqueda = informacion.results
+      console.log(arrayBusqueda);
+      for (var i = 0; i < arrayBusqueda.length; i++) {
+        document.querySelector("#seriesbuscador").innerHTML += `
+        <div id="hola">
+           <a href=detalledeserie.html?id=${arrayBusqueda[i].id}>
+           <img class="imagenesgenero" src="https://image.tmdb.org/t/p/original/${arrayBusqueda[i].poster_path}" alt="">
+           </a>
+        </div>
+        `;
+      }
+})
+.catch(function(error) {
+  console.log("Error: " + error);
+})*/
+
+fetch("https://api.themoviedb.org/3/search/tv?api_key=c062382504198a6a2cc69f4b0fcd9319&language=es-AR&query=" + buscar + "&page=1&include_adult=false")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        console.log('data = ', data);
+        data = data.results
+        console.log(data);
+        for (var i = 0; i < data.length; i++) {
+            var pelicula = data[i]
+            fetch('https://api.themoviedb.org/3/tv/' + pelicula.id + '?api_key=c062382504198a6a2cc69f4b0fcd9319&language=es-AR')
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(data) {
+                    var pelicula = data
+                    if (pelicula.poster_path!=null) {
+                      document.querySelector("#seriesbuscador").innerHTML += `
+                      <div id="hola">
+                         <a href=detalledeserie.html?id=${pelicula.id}>
+                         <img class="imagenesgenero" src="https://image.tmdb.org/t/p/original/${pelicula.poster_path}" alt="">
+                         </a>
+                      </div>
+                      `;
+
+                    }
+                })
+                .catch(function(err) {
+                    console.error(err);
+                });
+        }
+
+var formBtn = document.querySelector(".btn")
+var formInput = document.querySelector("#buscador")
+console.log(formBtn);
+console.log(formInput);
+formBtn.addEventListener("click", function(event){
+  if (formInput.value.length < 3) {
+    alert("Mínimo 3 caracteres para realizar la búsqueda.")
+    event.preventDefault();
+  }
+})
+
 //lista de generos
   var listaParaGeneros = document.querySelector("#genres-list");
 fetch('https://api.themoviedb.org/3/genre/tv/list?api_key=c062382504198a6a2cc69f4b0fcd9319')
@@ -58,4 +87,5 @@ fetch('https://api.themoviedb.org/3/genre/tv/list?api_key=c062382504198a6a2cc69f
   .catch(function(errores){
    console.log(errores)
  });
+})
 })
