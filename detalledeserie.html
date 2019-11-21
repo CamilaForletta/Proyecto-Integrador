@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="css/navBar.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald:400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css'>
+
   </head>
   <body>
     <header class="header">
@@ -27,7 +31,7 @@
             <li class="search_bar">
               <form class="buscador" action="resultadosdelbuscador.html" method="get">
                 <button class="btn"><i class="fa fa-search"></i></button>
-                 <input type="text" name="" value="" required></form></li>
+                 <input type="text" name="buscarSerie" value="" required></form></li>
 
 
             <li><a href="login.html">LOGIN</a> </li>
@@ -35,41 +39,55 @@
         </div>
       </div>
     </header>
-
+<br>
     <div class="contenedorDetalle">
-    <!--<div class="Title">
+    <div class="Title">
       <div class="container">
-        <div class="Title-big">
-          <h1>THE FLASH</h1>
-        </div>
-    </div>
 
+    </div>
+    <br>
     <div class="serie">
       <div class="serie-info">
         <div class="serie-info-container">
-          <div class="serie-info-box serie-info-box--genre">
-            <div class="serie-info-box-title">Genero</div>
-            <div class="serie-info-box-content">Biography, Drama, Thriller</div>
+          <div class="generos">
+
           </div>
-          <div class="serie-info-box serie-info-box--director">
-            <div class="serie-info-box-title">Director</div>
-            <div class="serie-info-box-content">Oliver Stone</div>
+          <div class="directors">
+
           </div>
-          <div class="serie-info-box serie-info-box--stars">
-            <div class="serie-info-box-title">Casting</div>
-            <div class="serie-info-box-content">Joseph Gordon-Levitt, Shailene Woodley, Melissa Leo, Zachary Quinto</div>
+          <div class="sinopsis">
+
           </div>
         </div>
-        <div class="serie-info-watch">
-          <span>Agregar a favoritos</span>
+        <p uk-margin>
+         <a class="uk-button uk-button-default" href="#modal-media-youtube" uk-toggle id="titulotrailer">Trailer</a>
+        </p>
+        <div id="modal-media-youtube" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical" id="trailerserie">
+
+        </div>
         </div>
       </div>
-      <div class="serie-image"><img src="https://image.tmdb.org/t/p/original//wHa6KOJAoNTFLFtp7wguUJKSnju.jpg" alt=""> </div>
+      <div class="serie-image"></div>
     </div>
-  </div>-->
+  </div>
     </div>
-<br><br>
+<br>
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider >
+  <div class="titles"><h2>RECOMENDACIONES</h2></div><br>
+  <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-5@m uk-grid" id="similares">
+      <!--<li>
+          <div class="uk-panel">
+              <img src="img/batwoman.jpg" alt="">
+              <div class="uk-position-center uk-panel"><h1>1</h1></div>
+          </div>
+      </li>-->
+  </ul>
 
+  <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+  <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+</div><br><br>
   <footer class="footer">
 
   <div id="low_menu2">
@@ -83,6 +101,11 @@
 
 <script type="text/javascript" src="js/detalledeserie.js"></script>
 <script src="js/navBar.js" charset="utf-8"></script>
+<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://kit.fontawesome.com/d13daeae51.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js'> </script>
 
   </body>
 </html>

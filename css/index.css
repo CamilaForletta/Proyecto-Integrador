@@ -8,18 +8,10 @@ body {
   background-color: black;
 }
 
-#movie-list3 li,
-#movie-list2 li,
-#movie-list1 li {
-  position: relative;
-  margin: 16px;
-  padding: 0;
-  width: 259.837px;
-  height: 389.750px;
-  border-radius: 4px;
-  box-shadow: 0 8px 16px #1126;
-  background: #111;
-  overflow: hidden;
+#movie-list3 img,
+#movie-list2 img,
+#movie-list1 img {
+ border-radius: 4px;
 }
 
 .info-serie-carrusel{
@@ -35,7 +27,7 @@ body {
 }
 
 .titles h2{
-    font-family: 'Oswald',sans-serif;
+    font-weight: 700;
     text-transform: uppercase;
     padding: 20px;
     text-align: center;

@@ -33,7 +33,6 @@ body, html {
 }
 
 .serie {
-  width: 100%;
   padding-left: 150px;
   box-sizing: border-box;
   margin-bottom: 100px;
@@ -84,6 +83,8 @@ body, html {
   cursor: pointer;
   height: 5%;
   font-size: 12px;
+  position: relative;
+  bottom: 40px;
 }
 
 .serie-info-watch span {
@@ -98,6 +99,7 @@ body, html {
   background-size: cover;
   position: relative;
   right: 65%;
+  bottom: 60px;
 }
 
 .serie-image img{
@@ -113,9 +115,10 @@ body, html {
 }
 
 .Title-big h1{
-  font-size: 35px;
+  font-size: 40px;
   font-weight: 800;
   text-transform: uppercase;
+  color: white;
 }
 
 .contenedorDetalle{
@@ -125,8 +128,48 @@ body, html {
   z-index: 0
 }
 
-.trailerserie {
+/*.trailerserie {
   position: relative;
   left: 82%;
   bottom: 35rem;
+}*/
+
+.generos{
+  width: 50%;
+  position: relative;
+  height: 20%;
+}
+
+.generos span{
+  position: relative;
+}
+
+.titulogenero{
+  color: grey;
+}
+
+.generos a{
+  text-decoration: none !important;
+}
+
+.rating::before{
+  content: '|';
+  color: #EA0000;
+  position: relative;
+  left: 90px;
+}
+
+.titles h2{
+  text-align: center;
+  font-weight: 700;
+}
+
+#similares img{
+  border-radius: 4px;
+}
+
+#titulotrailer{
+  color: white;
+  position: relative;
+  bottom: 1.5rem;
 }
