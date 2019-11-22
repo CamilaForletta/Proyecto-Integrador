@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css" />
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css'>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css">
+
 
   </head>
   <body>
@@ -21,7 +23,7 @@
   <a href="index.html"><img src="img/logo.png" width="50%" alt=""> </a>
         </div>
         <div class="inner_main_menu">
-          <ul>
+          <ul id="responsivemenu">
             <li><a href="buscadoravanzado.html">BUSCADOR AVANZADO</a> </li>
               <li>
                 <a href="#">GENEROS</a>
@@ -39,7 +41,6 @@
         </div>
       </div>
     </header>
-<br>
     <div class="contenedorDetalle">
     <div class="Title">
       <div class="container">
@@ -106,6 +107,12 @@
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js'> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.js" charset="utf-8"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#responsivemenu').slicknav();
+  });
+</script>
 
   </body>
 </html>
