@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 *{box-sizing: border-box;}
 body{
   font-family: 'Oswald', sans-serif;
@@ -21,4 +22,9 @@ body{
   padding-left: 15px;
   padding-right: 15px;
   margin-top: 50px;
+=======
+*{box-sizing:border-box;}
+body{
+  background-color: black;
+>>>>>>> Stashed changes
 }
