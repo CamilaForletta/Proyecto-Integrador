@@ -41,4 +41,15 @@ window.addEventListener('load', function(){
            console.log("Error: " + errores);
        })
 
+       var formBtn = document.querySelector(".btn")
+       var formInput = document.querySelector("#buscador")
+       console.log(formBtn);
+       console.log(formInput);
+       formBtn.addEventListener("click", function(event){
+         if (formInput.value.length < 3) {
+           alert("Mínimo 3 caracteres para realizar la búsqueda.")
+           event.preventDefault();
+         }
+       })
+
      })
