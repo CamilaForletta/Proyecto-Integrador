@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Buscador avanzado</title>
+    <title>Resultados del buscador avanzado</title>
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/buscadoravanzado.css">
+    <link rel="stylesheet" href="css/resultadosdelbuscadoravanzado.css">
     <link rel="stylesheet" href="css/navBar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald:400&display=swap" rel="stylesheet">
@@ -36,40 +36,16 @@
         </div>
       </div>
     </header>
-
-<main class="main-buscadoravanzado">
-  <!-- COMIENZA BUSCADOR -->
-  <br><br><br><br><br>
-  
-    <form method="get" action="resultadosdelbuscadoravanzado.html">
-           <div>
-             <label>Elegir Genero: </label>
-             <select name="genre" id="selectGenre">
-<!-- lo trae el js -->
-             </select>
-           </div>
-           <div>
-             <label>Elegir Orden: </label>
-             <select name="order" id="selectOrder">
-               <option value="vote_average.asc">Mas votadas - Ascendente</option>
-               <option value="vote_average.desc">Mas votadas - Descendente</option>
-               <option value="first_air_date.asc">Lanzamiento - Ascendente</option>
-               <option value="first_air_date.desc">Lanzamiento - Descendente</option>
-               <option value="popularity.asc">Popularidad - Ascendente</option>
-               <option value="popularity.desc">Popularidad - Descendente</option>
-             </select>
-           </div>
-
-           <div>
-             <label>Año de Estreno:</label>
-             <input type="text" name="date_release" id="inputYear">
-           </div>
-           <button type="submit" name="button">Buscar</button>
-         </form>
-
-
+<br><br><br><br><br><br><br>
+<main>
+    <section class="contenedor-de-series" id="resultado-bavanzado">
+              <h2 class="titulo">Resultados de su busqueda:</h2>
+            </section>
 </main>
-  <br><br><br><br><br><br><br><br><br>
+
+<br><br><br><br><br><br><br><br><br><br>
+
+
   <footer class="footer">
 
   <div id="low_menu2">
@@ -80,7 +56,6 @@
         Alejo Amillano | Camila Forletta </h5><h6>Copyright© 2019</h6>
       </div>
     </footer>
-<script type="text/javascript" src="js/buscadoravanzado.js"></script>
+<script type="text/javascript" src="js/resultadosdelbuscadoravanzado.js"></script>
   </body>
 </html>
-<!-- formulario con tres cosas desplegable que muestre generos campo con año de estreno y otro campo para orden de los resultado -->
