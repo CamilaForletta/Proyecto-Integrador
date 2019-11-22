@@ -37,16 +37,16 @@
 }
 .inner_main_menu li:nth-child(1){
   float: left;
-  padding-right: 40px;
 }
 .inner_main_menu li:nth-child(2){
   float: left;
+
 }
 .inner_main_menu li:nth-child(3){
   padding-right: 30px;
 }
 .inner_main_menu li:nth-child(4){
-  padding-right: 10px;
+  padding-right: 60px;
 }
 
 .inner_main_menu li a{
@@ -60,6 +60,44 @@
 
 .inner_main_menu ul li a:hover{
   color: white;
+}
+
+.inner_main_menu ul li ul{
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100px;
+  background-color: #262626;
+  padding: 0;
+}
+.inner_main_menu ul li ul{
+  position: absolute;
+  top: 40px;
+  left: -99999px;
+  width: 200px;
+  background-color: #262626;
+  padding: 0;
+}
+
+.inner_main_menu ul li:hover ul{
+  left: 0;
+}
+.inner_main_menu ul li ul li{
+  float: left;
+}
+
+.inner_main_menu ul li ul li ul{
+  top: 0;
+  left: -9999px;
+}
+.inner_main_menu ul li:hover ul li ul{
+  top: 0;
+  left: -9999px;
+}
+
+.inner_main_menu ul li ul li:hover ul{
+  top: 0;
+  left: 100px;
 }
 
 .inner_main_menu ul li:hover #genres-list {
@@ -116,9 +154,26 @@
   color: white;
 }
 
-@media (max-width: 750px) {
-
+.slicknav_menu{
+font-size: 16px;
+background: none;
+padding: 5px;
+position: fixed;
+z-index: 999;
+right: 0;
+width: 100%;
+display: none;
 }
-@media (max width: 450px) {
 
+.slicknav_menu ul{
+  background: #262626;
+  width: 80%;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
+.slicknav_menu{
+  display: block;
+}
+.inner_main_menu{
+  display: none;
 }

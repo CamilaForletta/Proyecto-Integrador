@@ -15,7 +15,7 @@ window.addEventListener('load',function(){
 
       var resultados = objetoLiteral.results;
 
-      var listaResultados = document.querySelector('#resultado-bavanzado');
+      var listaResultados = document.querySelector('#resultado-avanzado');
 
       var contenidoFinal = '';
 
@@ -23,11 +23,13 @@ window.addEventListener('load',function(){
 
         if (unResultado.poster_path != null) {
 
-          contenidoFinal += '<li>';
-          contenidoFinal += '<img src="https://image.tmdb.org/t/p/original/' + unResultado.poster_path + '"alt="la imagen">';
-          contenidoFinal += '<p>' + unResultado.name + '</p>';
-          contenidoFinal += '<a href="detalle.html?idDeSerie='+ unResultado.id +'">VER MAS</a>';
-          contenidoFinal += '</li>';
+          contenidoFinal += `
+          <div id="hola">
+             <a href=detalledeserie.html?id=${unResultado.id}>
+             <img class="imagenesgenero" src="https://image.tmdb.org/t/p/original/${unResultado.poster_path}" alt="">
+             </a>
+          </div>
+          `;
         }
       }
 
