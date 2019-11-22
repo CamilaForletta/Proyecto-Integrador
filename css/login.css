@@ -70,3 +70,15 @@ button{
   padding: 10px;
   border-radius: 5px;
 }
+/*tablet*/
+@media (min-width:451px) and (max-width: 750px) {
+legend{
+  font-size: 30px;
+}
+}
+/*mobile*/
+@media (min-width:100px) and (max-width:450px){
+legend{
+font-size:22px;
+}
+}
