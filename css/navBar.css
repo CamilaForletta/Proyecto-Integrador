@@ -67,7 +67,7 @@
   top: 40px;
   left: 0;
   width: 100px;
-  background-color: #262626;
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 0;
 }
 .inner_main_menu ul li ul{
@@ -75,7 +75,7 @@
   top: 40px;
   left: -99999px;
   width: 200px;
-  background-color: #262626;
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 0;
 }
 
@@ -156,17 +156,17 @@
 
 .slicknav_menu{
 font-size: 16px;
-background: none;
+background:  rgba(0, 0, 0, 0.8);
 padding: 5px;
 position: fixed;
-z-index: 999;
 right: 0;
+z-index: 3;
 width: 100%;
 display: none;
 }
 
 .slicknav_menu ul{
-  background: #262626;
+  background: rgba(0, 0, 0, 0.8);
   width: 80%;
 }
 
@@ -176,4 +176,5 @@ display: none;
 }
 .inner_main_menu{
   display: none;
+}
 }

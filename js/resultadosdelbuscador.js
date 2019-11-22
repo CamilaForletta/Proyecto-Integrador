@@ -24,6 +24,49 @@ var buscar = queryString.get("buscarSerie")
   console.log("Error: " + error);
 })*/
 
+var pageNum = 2;
+window.onscroll = function(ev) {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+fetch("https://api.themoviedb.org/3/search/tv?api_key=c062382504198a6a2cc69f4b0fcd9319&language=es-AR&query=" + buscar + "&page="+ pageNum++ +"&include_adult=false")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        console.log('data = ', data);
+        data = data.results
+        console.log(data);
+        if (data.length > 0) {
+          for (var i = 0; i < data.length; i++) {
+              var serie = data[i]
+              fetch('https://api.themoviedb.org/3/tv/' + serie.id + '?api_key=c062382504198a6a2cc69f4b0fcd9319&language=es-AR')
+                  .then(function(response) {
+                      return response.json();
+                  })
+                  .then(function(data) {
+                      var serie = data
+                      if (serie.poster_path!=null) {
+                        document.querySelector("#seriesbuscador").innerHTML += `
+                        <div id="hola">
+                           <a href=detalledeserie.html?id=${serie.id}>
+                           <img class="imagenesgenero" src="https://image.tmdb.org/t/p/original/${serie.poster_path}" alt="">
+                           </a>
+                        </div>
+                        `;
+
+                      }
+                  })
+
+                  }
+        } else {
+    			alert('¡No se encontró nada!');
+    			location.href = 'index.html';
+    		}
+      })
+    }
+    };
+
+
+
 fetch("https://api.themoviedb.org/3/search/tv?api_key=c062382504198a6a2cc69f4b0fcd9319&language=es-AR&query=" + buscar + "&page=1&include_adult=false")
     .then(function(response) {
         return response.json();
@@ -72,7 +115,7 @@ fetch("https://api.themoviedb.org/3/search/tv?api_key=c062382504198a6a2cc69f4b0f
                     alert("Mínimo 3 caracteres para realizar la búsqueda.")
                     event.preventDefault();
                   }
-                })            
+                })
         })
 
 //lista de generos
