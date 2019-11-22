@@ -179,7 +179,7 @@ body, html {
   max-width: 100px;
 }
 .serie-image img{
-  width: 350px;
+  width: 400px;
   height: 300px;
   border-radius: 5px;
 }
@@ -197,8 +197,24 @@ body, html {
   width: 30%;
   position: relative;
   height: 20%;
+  left:-45px;
 }
 .series-info{
     left: 25%;
 }
+}
+.serie-info-box--stars {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 60px;
+  position: relative;
+  left:-20px;
+}
+.Title-big{
+  position: relative;
+  top: 70px;
+  left: 50%;
+  display:flex;
+  flex-wrap: wrap;
 }
