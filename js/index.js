@@ -20,14 +20,14 @@ fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=c062382504198a6a2cc6
 
     contenedorCarrousel.innerHTML +=`
         <li>
-            <div class="uk-position-cover uk-animation-kenburns uk-transform-origin-center-left">
+            <div class="carrusel uk-position-cover uk-animation-kenburns uk-transform-origin-center-left">
               <img src="https://image.tmdb.org/t/p/original/${arraySeries[i].backdrop_path}" alt="">
             </div>
             <div class="info-serie-carrusel">
-              <h1>${arraySeries[i].name}</h1>
-              <h4>${arraySeries[i].vote_average} / 10&nbsp;&nbsp;<i class="fas fa-star"></i></h4>
-              <p>${arraySeries[i].overview}</p>
-              <h4><a href=detalledeserie.html?id=${arraySeries[i].id}>VER MÁS</a></h4>
+              <h1 class="titulo">${arraySeries[i].name}</h1>
+              <h4 class="puntuacion">${arraySeries[i].vote_average} / 10&nbsp;&nbsp;<i class="fas fa-star"></i></h4>
+              <p class="parrafo">${arraySeries[i].overview}</p>
+              <h4><a  class="ver-mas" href=detalledeserie.html?id=${arraySeries[i].id}>VER MÁS</a></h4>
           </div>
         </li>
     `;

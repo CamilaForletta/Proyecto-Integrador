@@ -47,14 +47,57 @@ position: relative;
 right: -10px;
 }
 
-=======
 
 /* TABLET */
-@media (max-width: 750px) and (min-width:){
-
+@media (min-width:451px) and (max-width: 750px){
+.carrusel img{
+      position:relative;
+      top:28%;
+    }
+body{line-height:0.8em;}
+  .titulo{
+    top:33%;
+    position:relative;
+  }
+  .puntuacion{
+    position:relative;
+    top:-40px;
+  }
+  .parrafo{
+    position: relative;
+    top:-60px;
+    font-size: 8px;
+  }
+.ver-mas{position: relative;
+top:-90px;
+font-size: 15px;}
 }
-
 /* MOBILE */
-@media (max-width:450px)  {
+@media (min-width:100px) and (max-width:450px)  {
+  body{line-height: 0.5em;}
+  .carrusel img{
+        position:relative;
+        top:28%;}
+    .titulo{
+      top:32%;
+      position:relative;
+      font-size: 25px;
+    }
+    .puntuacion{
+      position:relative;
+      top:-40px;
+      font-size: 15px;
+    }
+    .parrafo{
+      position: relative;
+      top:-60px;
+      font-size: 5px;
+
+    }
+  .ver-mas{
+    position: relative;
+    top:-90px;
+    font-size: 15px;
+  }
 
 }
