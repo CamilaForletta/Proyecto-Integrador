@@ -40,16 +40,19 @@
 <main class="main-buscadoravanzado">
   <!-- COMIENZA BUSCADOR -->
   <br><br><br><br><br>
-  
-    <form method="get" action="resultadosdelbuscadoravanzado.html">
+
+    <form id="form" method="get" action="resultadosdelbuscadoravanzado.html">
+      <fieldset>
+        <legend>Buscador avanzado:</legend><br><br>
            <div>
-             <label>Elegir Genero: </label>
+             <label>Elegir Genero: </label><br>
              <select name="genre" id="selectGenre">
 <!-- lo trae el js -->
              </select>
-           </div>
+           </div><br><br>
            <div>
-             <label>Elegir Orden: </label>
+
+             <label>Elegir Orden: </label><br>
              <select name="order" id="selectOrder">
                <option value="vote_average.asc">Mas votadas - Ascendente</option>
                <option value="vote_average.desc">Mas votadas - Descendente</option>
@@ -58,18 +61,19 @@
                <option value="popularity.asc">Popularidad - Ascendente</option>
                <option value="popularity.desc">Popularidad - Descendente</option>
              </select>
-           </div>
+           </div><br><br>
 
            <div>
-             <label>Año de Estreno:</label>
+             <label>Año de Estreno:</label><br>
              <input type="text" name="date_release" id="inputYear">
-           </div>
-           <button type="submit" name="button">Buscar</button>
+           </div><br><br>
+          <article id="formulario"><button class="formulario" type="submit" name="button">Buscar</button></article>
+          </fieldset>
          </form>
 
 
 </main>
-  <br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
   <footer class="footer">
 
   <div id="low_menu2">
@@ -81,6 +85,7 @@
       </div>
     </footer>
 <script type="text/javascript" src="js/buscadoravanzado.js"></script>
+<script src="js/navBar.js" charset="utf-8"></script>
   </body>
 </html>
 <!-- formulario con tres cosas desplegable que muestre generos campo con año de estreno y otro campo para orden de los resultado -->
