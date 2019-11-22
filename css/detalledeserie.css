@@ -173,3 +173,32 @@ body, html {
   position: relative;
   bottom: 1.5rem;
 }
+/*mobile*/
+@media (max-width: 450px) {
+.container{
+  max-width: 100px;
+}
+.serie-image img{
+  width: 350px;
+  height: 300px;
+  border-radius: 5px;
+}
+.serie-image {
+  display: flex;
+  margin-left: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  right: 85%;
+  bottom: 60px;
+}
+.generos{
+  width: 30%;
+  position: relative;
+  height: 20%;
+}
+.series-info{
+    left: 25%;
+}
+}

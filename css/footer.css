@@ -24,8 +24,12 @@
   top: 60%;
 }
 @media (max-width: 750px) {
-
+#low_menu2{
+  width: 100%;
+  align-content: center;
 }
 @media (max-width: 450px) {
+  #low_menu2{
+    width: 100%;}
 
 }
